@@ -19,8 +19,8 @@ module RedmineImpersonate
         end
 
         alias_method :allowed_to_without_impersonation?, :allowed_to?
-        def allowed_to?(action, context, options={}, &block)
-          if action == { controller: :impersonates, action: :select_user } 
+        def allowed_to?(action, context, options = {}, &block)
+          if action == { controller: :impersonates, action: :select_user }
             User.current_without_impersonation.allowed_to_without_impersonation?(action, context, options, &block)
           else
             allowed_to_without_impersonation?(action, context, options, &block)

@@ -1,15 +1,20 @@
 redmine_impersonate
 ===================
 
-Allows people with permission to impersonate user's in their project where the module is activated and allows administrator to impersonate anyone.  This is helpful in setting up roles and permissions for redmine.
+Allows administrators to impersonate other users. This is helpful in
+setting up roles and permissions for redmine.
 
+After installation you can see "Impersonate" links in the admin user
+list and on the users profile.
+
+To stop impersonating you will have a link besides the "Sign out" link.
 
 Installation:
 -------------
 
 - To install plugin, go to plugins folder of your Redmine repository and run:
 
-        git clone http://github.com/arkhitech/redmine_impersonate
+        git clone http://github.com/velaluqa/redmine_impersonate
 
 - Run db migrations for the plugin
 
@@ -19,7 +24,7 @@ Installation:
 
         bundle install
 
+Credits
+-------
 
-- After installation, log in to Redmine as administrator and go to plugin settings for Redmine impersonate plugin configuration.
-
-
+This plugin has "evolved" from [arkhitech/redmine_impersonate](https://github.com/arkhitech/redmine_impersonate).
